@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 
@@ -23,5 +24,9 @@ const Header = ({titulo}) => {
         </ContenedorHeader>        
      );
 }
- 
+
+Header.propTypes = {
+    titulo: PropTypes.string.isRequired
+}
+
 export default Header;

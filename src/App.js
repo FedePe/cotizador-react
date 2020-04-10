@@ -43,10 +43,12 @@ function App() {
           guardarCargando={guardarCargando}
         />
         {cargando ? <Spinner /> : null}
-        <Resumen
-          datos={datos}
-        />
-
+        {!cargando ? 
+          <Resumen
+            datos={datos}
+          />
+          : null
+        }
         {!cargando ? 
           <Resultado 
             cotizacion={cotizacion}
